@@ -59,7 +59,7 @@ function handleCheckbox(checkbox) {
     var isChecked = checkbox.checked;
 
     // Send a fetch request to the server to handle the add or remove action
-    fetch("/BooksReads/Index?handler=" + (isChecked ? "Add" : "Remove") + "&id=" + id, { method: "POST" })
+    fetch("/Books/Index?handler=" + (isChecked ? "Add" : "Remove") + "&id=" + id, { method: "POST" })
         .then(function (response) {
             if (!response.ok) {
                 throw new Error("Error while handling checkbox: " + response.statusText);
@@ -69,6 +69,7 @@ function handleCheckbox(checkbox) {
         .then(function (data) {
             if(data.success){
               checkbox.checked = isChecked;
+              console.log(data);
             }else {
               throw new Error("Error while handling checkbox");
             }

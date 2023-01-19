@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Services.Common.Contracts;
 using PaulBejinariu_Project.Data;
 using PaulBejinariu_Project.Models;
 
@@ -37,10 +34,12 @@ namespace PaulBejinariu_Project.Pages.Books
                 return NotFound();
             }
             bookToAdd.IsRead = true;
+
             var bookRead = new BookRead
             {
                 BookId = bookToAdd.Id,
-                Book = bookToAdd
+                Book = bookToAdd,
+                TimeSpent = 1
             };
             _context.BookRead.Add(bookRead);
             await _context.SaveChangesAsync();
@@ -57,9 +56,30 @@ namespace PaulBejinariu_Project.Pages.Books
             }
             bookToRemove.IsRead = false;
             var bookRead = await _context.BookRead.Where(b => b.BookId == id).FirstOrDefaultAsync();
+            if (bookRead == null)
+            {
+                return NotFound();
+            }    
             _context.BookRead.Remove(bookRead);
             await _context.SaveChangesAsync();
             return new JsonResult(new { success = true });
         }
+
+        public async Task<IActionResult> Index(int id, string handler)
+        {
+            if (handler == "Add")
+            {
+                return await OnPostAddAsync(id);
+            }
+            else if (handler == "Remove")
+            {
+                return await OnPostRemoveAsync(id);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }
