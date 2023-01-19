@@ -13,13 +13,12 @@
 <table class="table">
     <thead>
         <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.BookWishlist[0].Book)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.BookWishlist[0].BookGenre)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BookWishlist[0].Book)
-            </th>
-
             <th></th>
         </tr>
     </thead>
@@ -28,10 +27,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.BookGenre.Genre)
+                @Html.DisplayFor(modelItem => item.Book.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Book.Name)
+                    @Html.DisplayFor(modelItem => item.BookGenre.Genre)
                 </td>
                 <td>
                     <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
