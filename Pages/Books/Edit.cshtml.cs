@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using PaulBejinariu_Project.Data;
 using PaulBejinariu_Project.Models;
 
-namespace PaulBejinariu_Paul.Pages.Books
+namespace PaulBejinariu_Project.Pages.Books
 {
     public class EditModel : PageModel
     {

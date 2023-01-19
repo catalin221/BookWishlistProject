@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<PaulBejinariu_ProjectContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PaulBejinariu_PaulContext") ?? throw new InvalidOperationException("Connection string 'PaulBejinariu_PaulContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PaulBejinariu_ProjectContext") ?? throw new InvalidOperationException("Connection string 'PaulBejinariu_ProjectContext' not found.")));
 
 var app = builder.Build();
 

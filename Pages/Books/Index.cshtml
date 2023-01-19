@@ -1,5 +1,5 @@
 ﻿@page
-@model PaulBejinariu_Paul.Pages.Books.IndexModel
+@model PaulBejinariu_Project.Pages.Books.IndexModel
 
 @{
     ViewData["Title"] = "Books";
@@ -22,6 +22,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].LinkToShop)
             </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Book[0].IsRead)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -38,6 +41,9 @@
                 @Html.DisplayFor(modelItem => item.LinkToShop)
             </td>
             <td>
+                <input type="checkbox" onchange="handleCheckbox(this)" data-id="@item.Id" @(item.IsRead ? "checked" : "")>
+            </td>
+            <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
@@ -46,3 +52,26 @@
 }
     </tbody>
 </table>
+
+<script>
+function handleCheckbox(checkbox) {
+    var id = checkbox.getAttribute("data-id");
+    var isChecked = checkbox.checked;
+
+    // Send a fetch request to the server to handle the add or remove action
+    fetch("/BooksReads/Index?handler=" + (isChecked ? "Add" : "Remove") + "&id=" + id, { method: "POST" })
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Error while handling checkbox: " + response.statusText);
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            if(data.success){
+              checkbox.checked = isChecked;
+            }else {
+              throw new Error("Error while handling checkbox");
+            }
+        });
+}
+</script>

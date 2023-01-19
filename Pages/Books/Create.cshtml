@@ -1,5 +1,5 @@
 ﻿@page
-@model PaulBejinariu_Paul.Pages.Books.CreateModel
+@model PaulBejinariu_Project.Pages.Books.CreateModel
 
 @{
     ViewData["Title"] = "Create";
@@ -27,6 +27,11 @@
                 <label asp-for="Book.LinkToShop" class="control-label"></label>
                 <input asp-for="Book.LinkToShop" class="form-control" />
                 <span asp-validation-for="Book.LinkToShop" class="text-danger"></span>
+            </div>
+               <div class="form-group">
+                <label asp-for="Book.Price" class="control-label"></label>
+                <input asp-for="Book.Price" class="form-control" />
+                <span asp-validation-for="Book.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

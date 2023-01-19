@@ -10,8 +10,8 @@ using PaulBejinariu_Project.Data;
 
 namespace PaulBejinariu_Project.Migrations
 {
-    [DbContext(typeof(PaulBejinariu_ProjectContext))]
-    partial class PaulBejinariu_PaulContextModelSnapshot : ModelSnapshot
+
+    partial class PaulBejinariu_ProjectContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -35,8 +35,8 @@ namespace PaulBejinariu_Project.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("BookReadId")
-                        .HasColumnType("int");
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LinkToShop")
                         .HasColumnType("nvarchar(max)");
@@ -46,9 +46,11 @@ namespace PaulBejinariu_Project.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.HasKey("Id");
+                    b.Property<decimal?>("Price")
+                        .IsRequired()
+                        .HasColumnType("decimal(18,2)");
 
-                    b.HasIndex("BookReadId");
+                    b.HasKey("Id");
 
                     b.ToTable("Book");
                 });
@@ -79,10 +81,15 @@ namespace PaulBejinariu_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
                     b.Property<int>("TimeSpent")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BookId");
 
                     b.ToTable("BookRead");
                 });
@@ -98,9 +105,9 @@ namespace PaulBejinariu_Project.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Rating")
+                    b.Property<decimal?>("Rating")
                         .IsRequired()
-                        .HasColumnType("int");
+                        .HasColumnType("decimal(2,1)");
 
                     b.Property<string>("Review")
                         .IsRequired()
@@ -136,11 +143,15 @@ namespace PaulBejinariu_Project.Migrations
                     b.ToTable("BookWishlist");
                 });
 
-            modelBuilder.Entity("PaulBejinariu_Project.Models.Book", b =>
+            modelBuilder.Entity("PaulBejinariu_Project.Models.BookRead", b =>
                 {
-                    b.HasOne("PaulBejinariu_Project.Models.BookRead", null)
-                        .WithMany("Books")
-                        .HasForeignKey("BookReadId");
+                    b.HasOne("PaulBejinariu_Project.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("PaulBejinariu_Project.Models.BookReview", b =>
@@ -171,11 +182,6 @@ namespace PaulBejinariu_Project.Migrations
                     b.Navigation("Book");
 
                     b.Navigation("BookGenre");
-                });
-
-            modelBuilder.Entity("PaulBejinariu_Project.Models.BookRead", b =>
-                {
-                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

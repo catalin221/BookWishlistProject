@@ -10,6 +10,9 @@ namespace PaulBejinariu_Project.Models
 
         [DisplayName("Time Spent (Hours)"), Range(1, 500)]
         public int TimeSpent { get; set; } = 1;
-        public ICollection<Book>? Books { get; set;}
+        
+        [DisplayName("Book Title")]
+        public int BookId { get; set; }
+        public Book? Book { get; set;}
     }
 }

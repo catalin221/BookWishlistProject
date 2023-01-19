@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using PaulBejinariu_Project.Data;
 using PaulBejinariu_Project.Models;
 
-namespace PaulBejinariu_Paul.Pages.BookReviews
+namespace PaulBejinariu_Project.Pages.BookReviews
 {
     public class CreateModel : PageModel
     {

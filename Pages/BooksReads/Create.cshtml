@@ -1,5 +1,5 @@
 ﻿@page
-@model PaulBejinariu_Paul.Pages.BooksReads.CreateModel
+@model PaulBejinariu_Project.Pages.BooksReads.CreateModel
 
 @{
     ViewData["Title"] = "Create";
@@ -17,6 +17,16 @@
                 <label asp-for="BookRead.TimeSpent" class="control-label"></label>
                 <input asp-for="BookRead.TimeSpent" class="form-control" />
                 <span asp-validation-for="BookRead.TimeSpent" class="text-danger"></span>
+            </div>
+             <div>
+                <label asp-for="BookRead.Book"></label>
+                <select asp-for="BookRead.BookId">
+                <option value="">--Select a Book--</option>
+                    @foreach (var book in Model.Books)
+                    {
+                            <option value="@book.Id">@book.Name</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

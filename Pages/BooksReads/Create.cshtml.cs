@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using PaulBejinariu_Project.Data;
 using PaulBejinariu_Project.Models;
 
-namespace PaulBejinariu_Paul.Pages.BooksReads
+namespace PaulBejinariu_Project.Pages.BooksReads
 {
     public class CreateModel : PageModel
     {
@@ -21,12 +21,14 @@ namespace PaulBejinariu_Paul.Pages.BooksReads
 
         public IActionResult OnGet()
         {
+            var books = _context.Book.ToList();
+            Books = books;
             return Page();
         }
 
         [BindProperty]
         public BookRead BookRead { get; set; }
-        
+        public IEnumerable<Book> Books { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
