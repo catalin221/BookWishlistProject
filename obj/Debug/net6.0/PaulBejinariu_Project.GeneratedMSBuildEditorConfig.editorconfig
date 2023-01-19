@@ -1,0 +1,145 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PaulBejinariu_Project
+build_property.RootNamespace = PaulBejinariu_Project
+build_property.ProjectDir = C:\Users\Paul\Desktop\PaulBejinariu_Paul\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Paul\Desktop\PaulBejinariu_Paul
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookGenres/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0dlbnJlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookGenres/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0dlbnJlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookGenres/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0dlbnJlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookGenres/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0dlbnJlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookGenres/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0dlbnJlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookReviews/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1Jldmlld3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookReviews/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1Jldmlld3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookReviews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1Jldmlld3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookReviews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1Jldmlld3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookReviews/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1Jldmlld3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BooksReads/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NSZWFkc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BooksReads/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NSZWFkc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BooksReads/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NSZWFkc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BooksReads/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NSZWFkc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BooksReads/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NSZWFkc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Books/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Books/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Books/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Books/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Books/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookWishlists/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1dpc2hsaXN0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookWishlists/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1dpc2hsaXN0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookWishlists/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1dpc2hsaXN0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookWishlists/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1dpc2hsaXN0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/BookWishlists/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1dpc2hsaXN0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paul/Desktop/PaulBejinariu_Paul/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dfh2ndstfi

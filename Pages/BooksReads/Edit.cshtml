@@ -1,0 +1,35 @@
+﻿@page
+@model PaulBejinariu_Paul.Pages.BooksReads.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BookRead</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BookRead.Id" />
+            <div class="form-group">
+                <label asp-for="BookRead.TimeSpent" class="control-label"></label>
+                <input asp-for="BookRead.TimeSpent" class="form-control" />
+                <span asp-validation-for="BookRead.TimeSpent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
