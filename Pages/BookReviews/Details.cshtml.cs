@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using PaulBejinariu_Project.Data;
@@ -28,7 +24,10 @@ namespace PaulBejinariu_Project.Pages.BookReviews
                 return NotFound();
             }
 
-            var bookreview = await _context.BookReview.FirstOrDefaultAsync(m => m.Id == id);
+            var bookreview = await _context.BookReview
+                .Include(b => b.Book)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (bookreview == null)
             {
                 return NotFound();

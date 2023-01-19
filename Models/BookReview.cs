@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -14,6 +15,8 @@ namespace PaulBejinariu_Project.Models
         [Range(0, 10)]
         [Column(TypeName = "decimal(2, 1)")]
         public decimal? Rating { get; set; } = 0;
+
+        [DisplayName("Book Title")]
         public int BookId { get; set; }
         public Book? Book { get; set; }
     }

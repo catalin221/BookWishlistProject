@@ -29,7 +29,9 @@ namespace PaulBejinariu_Project.Pages.BookReviews
                 return NotFound();
             }
 
-            var bookreview = await _context.BookReview.FirstOrDefaultAsync(m => m.Id == id);
+            var bookreview = await _context.BookReview
+                .Include(b => b.Book)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (bookreview == null)
             {

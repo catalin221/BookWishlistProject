@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,18 +20,18 @@ namespace PaulBejinariu_Project.Pages.BookReviews
 
         public IActionResult OnGet()
         {
-        ViewData["BookId"] = new SelectList(_context.Book, "Id", "Author");
+            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Name");
             return Page();
         }
 
         [BindProperty]
         public BookReview BookReview { get; set; }
-        
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }

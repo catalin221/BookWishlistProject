@@ -30,13 +30,14 @@ namespace PaulBejinariu_Project.Pages.BookWishlists
                 return NotFound();
             }
 
-            var bookwishlist =  await _context.BookWishlist.FirstOrDefaultAsync(m => m.Id == id);
+            var bookwishlist = await _context.BookWishlist.FirstOrDefaultAsync(m => m.Id == id);
             if (bookwishlist == null)
             {
                 return NotFound();
             }
             BookWishlist = bookwishlist;
-           ViewData["BookGenreId"] = new SelectList(_context.BookGenre, "Id", "Id");
+            ViewData["BookGenreId"] = new SelectList(_context.BookGenre, "Id", "Genre");
+            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Name");
             return Page();
         }
 
@@ -72,7 +73,7 @@ namespace PaulBejinariu_Project.Pages.BookWishlists
 
         private bool BookWishlistExists(int id)
         {
-          return _context.BookWishlist.Any(e => e.Id == id);
+            return _context.BookWishlist.Any(e => e.Id == id);
         }
     }
 }

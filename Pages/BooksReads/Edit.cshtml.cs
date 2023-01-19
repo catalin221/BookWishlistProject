@@ -30,12 +30,16 @@ namespace PaulBejinariu_Project.Pages.BooksReads
                 return NotFound();
             }
 
-            var BookRead =  await _context.BookRead.FirstOrDefaultAsync(m => m.Id == id);
-            if (BookRead == null)
+            var bookRead = await _context.BookRead
+            .Include(b => b.Book)
+            .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (bookRead == null)
             {
                 return NotFound();
             }
-            BookRead = BookRead;
+            BookRead = bookRead;
+            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Name");
             return Page();
         }
 
@@ -71,7 +75,7 @@ namespace PaulBejinariu_Project.Pages.BooksReads
 
         private bool BookReadExists(int id)
         {
-          return _context.BookRead.Any(e => e.Id == id);
+            return _context.BookRead.Any(e => e.Id == id);
         }
     }
 }

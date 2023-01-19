@@ -20,7 +20,8 @@ namespace PaulBejinariu_Project.Pages.BookReviews
             if (_context.BookReview != null)
             {
                 BookReview = await _context.BookReview
-                .Include(b => b.Book).ToListAsync();
+                .Include(b => b.Book)
+                .ToListAsync();
             }
         }
     }

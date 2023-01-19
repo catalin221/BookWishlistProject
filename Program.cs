@@ -22,6 +22,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+    endpoints.MapControllerRoute(
+        name: "books",
+        pattern: "Books/AddRemoveBookRead/{id}/{handler}",
+        defaults: new { controller = "Books", action = "AddRemoveBookRead" });
+});
 
 app.UseAuthorization();
 

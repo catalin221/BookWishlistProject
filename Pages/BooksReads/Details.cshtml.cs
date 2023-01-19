@@ -19,7 +19,7 @@ namespace PaulBejinariu_Project.Pages.BooksReads
             _context = context;
         }
 
-      public BookRead BookRead { get; set; }
+        public BookRead BookRead { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,14 +28,17 @@ namespace PaulBejinariu_Project.Pages.BooksReads
                 return NotFound();
             }
 
-            var BookRead = await _context.BookRead.FirstOrDefaultAsync(m => m.Id == id);
-            if (BookRead == null)
+            var bookRead = await _context.BookRead
+                .Include(b => b.Book)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (bookRead == null)
             {
                 return NotFound();
             }
-            else 
+            else
             {
-                BookRead = BookRead;
+                BookRead = bookRead;
             }
             return Page();
         }

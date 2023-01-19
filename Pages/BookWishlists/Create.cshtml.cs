@@ -18,8 +18,7 @@ namespace PaulBejinariu_Project.Pages.BookWishlists
         public IActionResult OnGet()
         {
             ViewData["BookGenreId"] = new SelectList(_context.BookGenre, "Id", "Genre");
-            var books = _context.Book.ToList();
-            Books = books;
+            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Name");
             return Page();
         }
 
@@ -27,8 +26,6 @@ namespace PaulBejinariu_Project.Pages.BookWishlists
 
         [BindProperty]
         public BookWishlist BookWishlist { get; set; }
-        public IEnumerable<Book> Books { get; set; }
-
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

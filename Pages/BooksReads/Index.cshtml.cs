@@ -25,7 +25,9 @@ namespace PaulBejinariu_Project.Pages.BooksReads
         {
             if (_context.BookRead != null)
             {
-                BookRead = await _context.BookRead.ToListAsync();
+                BookRead = await _context.BookRead
+                    .Include(b => b.Book)
+                    .ToListAsync();
             }
         }
     }

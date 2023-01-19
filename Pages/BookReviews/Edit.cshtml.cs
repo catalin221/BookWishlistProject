@@ -36,7 +36,7 @@ namespace PaulBejinariu_Project.Pages.BookReviews
                 return NotFound();
             }
             BookReview = bookreview;
-           ViewData["BookId"] = new SelectList(_context.Book, "Id", "Author");
+           ViewData["BookId"] = new SelectList(_context.Book, "Id", "Name");
             return Page();
         }
 

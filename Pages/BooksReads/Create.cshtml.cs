@@ -21,8 +21,7 @@ namespace PaulBejinariu_Project.Pages.BooksReads
 
         public IActionResult OnGet()
         {
-            var books = _context.Book.ToList();
-            Books = books;
+            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Name");
             return Page();
         }
 
